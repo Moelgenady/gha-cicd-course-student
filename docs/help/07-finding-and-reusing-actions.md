@@ -293,14 +293,16 @@ For this course, prefer actions that make the workflow clearer, not more advance
 
 In the core build lab, we use a plain `docker build` command because it is easier to teach first.
 
-After that, the optional Buildx example shows how a reusable Docker action can replace that raw command:
+After that, `EX-05` shows how a reusable Docker action can replace that raw command:
 
 - plain command path: read the build logic directly
 - Buildx action path: reuse a ready-made building block
 
-You can see that example here:
+You can build that example yourself in:
 
-- [Buildx Version of the Build Artifact Workflow](../../.github/workflows/03-build-artifact-exercise.yml)
+- [EX-05: Build Artifact with Buildx](../../exercises/EX-05-build-artifact-with-buildx.md)
+
+If your instructor reveals a reference solution, it lives in the instructor repository.
 
 ## Reusable Actions versus Reusable Workflows
 

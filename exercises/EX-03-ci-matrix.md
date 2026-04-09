@@ -30,9 +30,11 @@ Finish `LAB-02` first, then use this challenge to extend the same CI idea across
 
 ## Challenge Workflow
 
-Prepared workflow file:
+Create this workflow file yourself:
 
 `.github/workflows/02-ci-matrix-exercise.yml`
+
+For this exercise, the prepared solution workflow exists only in the instructor repository.
 
 ## Success Check
 

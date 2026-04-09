@@ -32,9 +32,11 @@ Finish `LAB-01` first, then use this challenge to extend the trigger idea.
 
 ## Challenge Workflow
 
-Prepared workflow file:
+Create this workflow file yourself:
 
 `.github/workflows/01-hello-exercise.yml`
+
+For this exercise, the prepared solution workflow exists only in the instructor repository.
 
 ## Success Check
 

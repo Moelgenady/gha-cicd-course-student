@@ -71,11 +71,9 @@ After this lab, continue with:
 
 - [EX-05: Build Artifact with Buildx](../exercises/EX-05-build-artifact-with-buildx.md)
 
-You can also look directly at this exercise workflow version:
+In `EX-05`, create a Buildx-based version of this workflow yourself.
 
-`.github/workflows/03-build-artifact-exercise.yml`
-
-This version keeps the same story but uses reusable Docker actions instead of raw Docker commands where possible:
+That version keeps the same story but uses reusable Docker actions instead of raw Docker commands where possible:
 
 - `docker/setup-buildx-action` prepares Buildx
 - `docker/build-push-action` builds the image
@@ -93,6 +91,8 @@ Use this exercise when you want to compare:
 
 - a simple raw Docker command path
 - a reusable-action path that many real workflows use
+
+If your instructor reveals a reference solution for `EX-05`, it lives in the instructor repository.
 
 ## How the Docker Image Tar File Can Be Used
 

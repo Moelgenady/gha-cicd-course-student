@@ -44,9 +44,11 @@ For live teaching, `workflow_dispatch` is still the safest way to start the run 
 
 ## Challenge Workflow
 
-Prepared workflow file:
+Create this workflow file yourself:
 
 `.github/workflows/02-ci-exercise.yml`
+
+For this exercise, the prepared solution workflow exists only in the instructor repository.
 
 ## Success Check
 

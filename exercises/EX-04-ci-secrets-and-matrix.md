@@ -33,7 +33,7 @@ Finish `LAB-02` first, then use this challenge only if the class is ready for a 
 
 ## Pattern A: Build the Matrix From One Secret
 
-Prepared workflow:
+Create this workflow file yourself:
 
 `.github/workflows/02-ci-matrix-from-secret-exercise.yml`
 
@@ -41,11 +41,13 @@ Use this when the whole matrix list must come from one changing stored value.
 
 ## Pattern B: Fixed Matrix with Secret Lookup
 
-Prepared workflow:
+Create this workflow file yourself:
 
 `.github/workflows/02-ci-matrix-secret-lookup-exercise.yml`
 
 Use this when the matrix entries are already known and each job only needs to read a different secret.
+
+For this exercise, the prepared solution workflows exist only in the instructor repository.
 
 ## Concepts It Reinforces
 

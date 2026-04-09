@@ -23,13 +23,13 @@ The teaching sequence should be:
 
 ## Important Note
 
-For now, the exercise workflow files also exist in this repository.
+Every exercise in this folder is a build-it-yourself task.
 
-During live training, your instructor may still choose to introduce those workflow files step by step.
+If an exercise needs a workflow file, create that workflow file yourself in your student repository.
 
-The final PR and branch-protection exercise is different.
+Prepared solution workflows live only in the instructor repository.
 
-In that exercise, you create the workflow files yourself.
+`EX-09` is the exception because it reuses the core course workflows instead of asking you to add a new exercise workflow file.
 
 ## Day 1 Exercise Path
 

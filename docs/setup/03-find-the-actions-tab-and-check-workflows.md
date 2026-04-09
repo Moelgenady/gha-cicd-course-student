@@ -34,9 +34,11 @@ If you do not see any workflow runs yet, that is okay.
 
 The first lab will create the first run.
 
-If you also see workflows with names that start with `EXERCISE` or `OPTIONAL`, do not worry.
+You may also see later optional example workflows.
 
-Those are extra challenge or example workflows and are not part of the core starting path.
+That is normal.
+
+At the start, still focus only on the four core workflows.
 
 ## Open Only These Workflows at the Start
 
@@ -55,7 +57,7 @@ Placeholder screenshot target:
 
 `docs/images/actions-page-core-workflows.png`
 
-On that future screenshot, visually mark the four core workflows and remind students to ignore `EXERCISE` and `OPTIONAL` entries unless the instructor asks for them.
+On that future screenshot, visually mark the four core workflows and remind students that exercises later in the course are built by creating new workflow files yourself.
 
 ## Step 4: If GitHub Asks You to Enable Workflows
 

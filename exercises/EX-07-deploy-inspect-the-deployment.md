@@ -31,9 +31,11 @@ Finish `LAB-04` first, then use this challenge to make the deployment result eas
 
 ## Challenge Workflow
 
-Prepared workflow file:
+Create this workflow file yourself:
 
 `.github/workflows/04-deploy-exercise.yml`
+
+For this exercise, the prepared solution workflow exists only in the instructor repository.
 
 ## What to Notice
 

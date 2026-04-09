@@ -47,9 +47,11 @@ After that, continue to:
 
 ## Challenge Workflow
 
-Prepared workflow file:
+Create this workflow file yourself:
 
 `.github/workflows/04-ci-then-build-artifact-exercise.yml`
+
+For this exercise, the prepared solution workflow exists only in the instructor repository.
 
 ## What to Notice
 

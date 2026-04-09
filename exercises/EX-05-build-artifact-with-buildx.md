@@ -31,9 +31,15 @@ Finish `LAB-03` first, then use this challenge to compare the same packaging sto
 
 ## Challenge Workflow
 
-Prepared workflow file:
+Create this workflow file yourself:
 
 `.github/workflows/03-build-artifact-exercise.yml`
+
+For this exercise, the prepared solution workflow exists only in the instructor repository.
+
+If you need syntax help while building it, use:
+
+- [Finding and Reusing GitHub Actions](../docs/help/07-finding-and-reusing-actions.md)
 
 ## Success Check
 

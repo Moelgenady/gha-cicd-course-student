@@ -50,7 +50,7 @@ Create these workflow files yourself:
 - `.github/workflows/05-pr-ci-exercise.yml`
 - `.github/workflows/05-cd-after-pr-merge-exercise.yml`
 
-Unlike some earlier exercises, this one is meant to be built by you.
+Like the other exercises in this course, this one is meant to be built by you.
 
 ## Requirements
 

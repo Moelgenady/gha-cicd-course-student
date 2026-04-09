@@ -29,14 +29,16 @@ For the core path, focus on these workflows:
 - `03 Build Artifact Workflow`
 - `04 Deploy Workflow`
 
-If you see workflows with names that include `EXERCISE` or `OPTIONAL`, ignore them unless your instructor explicitly asks you to open them.
+At the start of the course, focus on the four core workflows first.
+
+Later in the course, some exercises will ask you to create new workflow files yourself.
 
 Use this quick rule in the `Actions` tab:
 
 - main path = the lab or exercise page your instructor is teaching now
 - core workflows = `01`, `02`, `03`, `04`
-- exercise workflows = only the `EXERCISE` workflow named in the matching exercise page, or the workflow file the page asks you to create
-- optional path = `OPTIONAL` workflows and later examples
+- exercise workflows = create them yourself only when the matching exercise page asks you to do that
+- optional path = workflows `05`, `06`, and later examples
 
 ## Before Class
 

@@ -60,22 +60,22 @@ Matrix workflows are useful, but beginners now have to read:
 
 That is why we did not put matrix builds in the main course labs.
 
-### Optional Repo Example
+### Practice Path
 
-If you want to see a small matrix exercise in this repository, open:
+If you want to build a small matrix exercise yourself in this repository, continue with:
 
-- [02-ci-matrix-exercise.yml](../.github/workflows/02-ci-matrix-exercise.yml)
+- [EX-03: CI Matrix](../exercises/EX-03-ci-matrix.md)
 
-This example keeps the trigger manual-only and repeats the CI test job for:
+That exercise keeps the trigger manual-only and repeats the CI test job for:
 
 - Python `3.11`
 - Python `3.12`
 
-### Advanced Repo Example: Matrix Values From a Secret
+### Advanced Practice Pattern: Matrix Values From One Secret
 
-There is also a more advanced exercise workflow here:
+For a more advanced build-it-yourself pattern, continue with:
 
-- [02-ci-matrix-from-secret-exercise.yml](../.github/workflows/02-ci-matrix-from-secret-exercise.yml)
+- [EX-04: CI Secrets and Matrix Patterns](../exercises/EX-04-ci-secrets-and-matrix.md)
 
 This example shows a useful GitHub Actions limitation and workaround:
 
@@ -103,11 +103,9 @@ This example is useful mainly for understanding how GitHub Actions contexts and 
 
 This is a useful pattern exercise, not the recommended default for normal non-sensitive configuration.
 
-### Smarter Fixed-Matrix Example: Secret Lookup
+### Smarter Fixed-Matrix Pattern: Secret Lookup
 
-There is also a second advanced exercise workflow here:
-
-- [02-ci-matrix-secret-lookup-exercise.yml](../.github/workflows/02-ci-matrix-secret-lookup-exercise.yml)
+The same `EX-04` exercise also includes a second build-it-yourself pattern:
 
 This version uses a different idea:
 
@@ -125,6 +123,8 @@ Important difference:
 
 - use the `from-secret` workflow when the whole matrix list must come from one secret
 - use the `secret-lookup` workflow when the matrix is already known and each job just needs to read a different secret
+
+Prepared solution workflows for these patterns live only in the instructor repository.
 
 This is also a useful pattern exercise, not the recommended default for normal non-sensitive configuration.
 
