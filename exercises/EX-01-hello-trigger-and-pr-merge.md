@@ -1,47 +1,33 @@
 # EX-01: Hello Trigger and PR Merge
 
-## Problem Statement
-
-This is a challenge based on `LAB-01`.
-
-The first workflow already proved that GitHub Actions can run.
-
-Now imagine a team says:
-
-"We want this tiny workflow to react to a pull request being merged into `main`, not just to a direct push."
-
-That changes the trigger design question.
-
-## Related Core Lab
-
-Use this after:
+## Use This After
 
 - [LAB-01: First Workflow](../labs/LAB-01-first-workflow.md)
 
-Do not start with this exercise.
+## Goal
 
-Finish `LAB-01` first, then use this challenge to extend the trigger idea.
+Take the tiny hello workflow and change the trigger story.
 
-## Concepts It Reinforces
+Instead of reacting to a simple direct change, make it react to a pull request being merged into `main`.
 
-- trigger choice
-- `pull_request`
-- branch filtering
-- merged versus closed
-- why `workflow_dispatch` is still useful for teaching
-
-## Challenge Workflow
+## Build
 
 Create this workflow file yourself:
 
 `.github/workflows/01-hello-exercise.yml`
 
-For this exercise, the prepared solution workflow exists only in the instructor repository.
+Reference solution: instructor repo only.
 
-## Success Check
+## Requirements
 
-You are done when you can explain:
+- Create a very small workflow in `.github/workflows/01-hello-exercise.yml`.
+- The workflow should react to pull requests that target `main`.
+- The workflow should clearly distinguish between a pull request that was only closed and a pull request that was really merged.
+- The workflow should still include `workflow_dispatch` so it can be started safely during class.
 
-- why this challenge does not use the same trigger as Lab 01
-- why a pull request being closed is not always the same as being merged
-- why a safe manual trigger is still useful during training
+## Acceptance Criteria
+
+- The workflow starts for the correct pull request event against `main`.
+- The workflow does not treat every closed pull request as a merged pull request.
+- You can explain why this trigger is different from Lab 01.
+- You can explain why `workflow_dispatch` is still useful here.

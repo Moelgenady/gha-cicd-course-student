@@ -1,54 +1,32 @@
 # EX-07: Deploy and Inspect the Deployment
 
-## Problem Statement
-
-This is a challenge based on `LAB-04`.
-
-The main deploy lab already proves that the saved package can be loaded, started, and checked.
-
-Now imagine a teammate says:
-
-"The smoke test passed, but I want a little more visibility into what was actually deployed."
-
-That is the challenge.
-
-## Related Core Lab
-
-Use this after:
+## Use This After
 
 - [LAB-04: Deploy Workflow](../labs/LAB-04-deploy-workflow.md)
 
-Do not start with this exercise.
+## Goal
 
-Finish `LAB-04` first, then use this challenge to make the deployment result easier to inspect.
+Keep the same deployment flow from Lab 04, but add a little more visibility after startup.
 
-## Concepts It Reinforces
-
-- deploy still uses the saved artifact
-- smoke test versus richer visibility
-- container inspection with `docker ps`
-- health response body after startup
-
-## Challenge Workflow
+## Build
 
 Create this workflow file yourself:
 
 `.github/workflows/04-deploy-exercise.yml`
 
-For this exercise, the prepared solution workflow exists only in the instructor repository.
+Reference solution: instructor repo only.
 
-## What to Notice
+## Requirements
 
-Look for:
+- Create a deploy workflow in `.github/workflows/04-deploy-exercise.yml`.
+- Keep the same build-triggered deploy flow from Lab 04.
+- Keep using the saved artifact from the build run.
+- After startup, show the running containers with `docker ps`.
+- After startup, print the `/health` response body.
 
-- the same build-triggered deploy pattern from `LAB-04`
-- a container list after startup
-- the `/health` response body after the app is ready
+## Acceptance Criteria
 
-## Success Check
-
-You are done when you can explain:
-
-- what stayed the same compared with `LAB-04`
-- what extra visibility this challenge added
-- why this is still a deployment check, not a new deployment system
+- The workflow still uses the same saved package from the build run.
+- The logs show the running container list after startup.
+- The logs show the `/health` response body.
+- You can explain why this is still the same deploy story, not a new deployment system.

@@ -2,36 +2,22 @@
 
 ## Purpose
 
-These pages turn the workflow ideas into short problem statements.
+These exercises come after the matching lab.
 
-Use them after the relevant lab in the course sequence.
+Use them to build the next step yourself.
 
-Every exercise in this folder is based on a specific lab.
+## Simple Rules
 
-That means:
+- do the lab first
+- then do the exercise
+- create the exercise workflow file yourself when the page asks for one
+- solution workflows live only in the instructor repo
 
-- the lab comes first
-- the exercise extends that lab
-- the exercise should never replace the lab
+`EX-09` is the one exception.
 
-The teaching sequence should be:
+It reuses the core course workflows instead of adding a new exercise workflow file.
 
-1. explain the concept
-2. complete the core lab
-3. let students practice the core lab
-4. complete the matching exercise
-
-## Important Note
-
-Every exercise in this folder is a build-it-yourself task.
-
-If an exercise needs a workflow file, create that workflow file yourself in your student repository.
-
-Prepared solution workflows live only in the instructor repository.
-
-`EX-09` is the exception because it reuses the core course workflows instead of asking you to add a new exercise workflow file.
-
-## Day 1 Exercise Path
+## Day 1
 
 After [LAB-01: First Workflow](../labs/LAB-01-first-workflow.md):
 
@@ -43,15 +29,9 @@ After [LAB-02: Real CI Workflow](../labs/LAB-02-real-ci-workflow.md):
 2. [EX-03: CI Matrix](EX-03-ci-matrix.md)
 3. [EX-04: CI Secrets and Matrix Patterns](EX-04-ci-secrets-and-matrix.md)
 
-## Day 2 Exercise Path
+## Day 2
 
-`EX-06` is the instructor-guided Day 2 bridge exercise.
-
-`EX-09` is the full CI/CD recovery exercise.
-
-`EX-10` is the final team workflow exercise.
-
-At the beginning of Day 2, after the opening bridge:
+After the Day 2 opening bridge:
 
 1. [EX-06: CI Then Build Artifact With `needs`](EX-06-ci-then-build-artifact-with-needs.md)
 
@@ -64,7 +44,7 @@ After [LAB-04: Deploy Workflow](../labs/LAB-04-deploy-workflow.md):
 1. [EX-07: Deploy and Inspect the Deployment](EX-07-deploy-inspect-the-deployment.md)
 2. [EX-08: Build and Run With GitHub Variables](EX-08-build-and-run-with-github-variables.md)
 
-At the end of Day 2, after [LAB-05: Full CI/CD Flow](../labs/LAB-05-full-cicd-flow.md):
+After [LAB-05: Full CI/CD Flow](../labs/LAB-05-full-cicd-flow.md):
 
 1. [EX-09: Full Flow Failure and Recovery](EX-09-full-flow-failure-and-recovery.md)
 2. [EX-10: PR-Based CI/CD with Branch Protection](EX-10-pr-based-ci-cd-with-branch-protection.md)

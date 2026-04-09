@@ -1,52 +1,18 @@
 # EX-08: Build and Run With GitHub Variables
 
-## Problem Statement
-
-This is a challenge based on `LAB-04`.
-
-In the main deploy lab, the workflow used a saved artifact from an earlier workflow.
-
-This challenge keeps the path smaller on purpose:
-
-- build the image
-- start the container
-- check the app
-
-All of that happens on the same runner in one job.
-
-The new GitHub Actions idea is reading normal configuration from GitHub repository variables.
-
-This is a focused configuration exercise.
-
-It is useful for practice, but it does not replace the main lab story of deploying the saved artifact from an earlier workflow.
-
-## Related Core Lab
-
-Use this after:
+## Use This After
 
 - [LAB-04: Deploy Workflow](../labs/LAB-04-deploy-workflow.md)
 
-Do not start with this exercise.
+## Goal
 
-Finish `LAB-04` first, then use this challenge to practice one small configuration idea in a simpler build-and-run flow.
+Practice one smaller build-and-run flow on the same runner.
 
-## Concepts It Reinforces
+The new GitHub Actions idea here is reading normal configuration from repository variables.
 
-- build and run on the same runner
-- single-job workflow flow
-- Dockerfile `ARG`
-- GitHub repository variables with `vars`
-- non-secret configuration values
+## Before You Start
 
-## Before You Run the Workflow
-
-Create normal repository variables for this exercise.
-
-Do not use secrets.
-
-Do not use GitHub environments for this exercise.
-
-Go to:
+Create repository variables here:
 
 `Settings -> Secrets and variables -> Actions -> Variables`
 
@@ -55,45 +21,41 @@ Create:
 - `PYTHON_BASE_IMAGE` = `python:3.12-slim`
 - `APP_PORT` = `8000`
 
-## Where to Create Repository Variables
+Use normal repository variables for this exercise.
 
-Use this GitHub path:
+Do not use secrets.
 
-`Settings -> Secrets and variables -> Actions -> Variables`
+Do not use GitHub environments.
 
-Repository variables are not workflow `env`, and they are not secrets.
-
-Placeholder screenshot target for a future course image:
+Placeholder screenshot target:
 
 `docs/images/repository-variables-page.png`
 
-## Files to Use
+## Build
 
 Create this workflow file yourself:
 
 - `.github/workflows/04-build-and-run-with-vars-exercise.yml`
 
-Supporting file already provided in the repository:
+Use this supporting file from the repo:
 
 - `Dockerfile.arg-base`
 
-For this exercise, the prepared solution workflow exists only in the instructor repository.
+Reference solution: instructor repo only.
 
-## What to Notice
+## Requirements
 
-Look for:
+- Create one workflow in `.github/workflows/04-build-and-run-with-vars-exercise.yml`.
+- The workflow should build the image, start the container, and check the app on the same runner.
+- The workflow should read `${{ vars.PYTHON_BASE_IMAGE }}` and `${{ vars.APP_PORT }}` from repository variables.
+- The workflow should fail clearly if a required variable is missing.
+- The workflow should pass the base image into Docker with `--build-arg`.
+- The workflow should run the health check after startup.
 
-- one job that does both build and run
-- `${{ vars.PYTHON_BASE_IMAGE }}` and `${{ vars.APP_PORT }}`
-- a check step that fails clearly if a variable is missing
-- `--build-arg BASE_IMAGE=...` in the Docker build step
-- the health check after the container starts
+## Acceptance Criteria
 
-## Success Check
-
-You are done when you can explain:
-
-- what changed compared with `LAB-04`
-- how `vars` is different from workflow `env`
-- why `PYTHON_BASE_IMAGE` and `APP_PORT` are variables, not secrets
-- how the workflow reused settings values during both build and run
+- The logs show that the repository variables were read during the workflow.
+- The logs show that those values affected both the build step and the run step.
+- The app starts and the health check runs successfully.
+- You can explain how this differs from Lab 04.
+- You can explain why these values are variables, not secrets.

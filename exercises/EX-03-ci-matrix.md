@@ -1,45 +1,31 @@
 # EX-03: CI Matrix
 
-## Problem Statement
-
-This is a challenge based on `LAB-02`.
-
-The CI workflow already proves the tests pass in one environment.
-
-Now imagine the team asks:
-
-"What if we want the same CI check to run on Python `3.11` and `3.12` without copying the whole job twice?"
-
-That is the matrix problem.
-
-## Related Core Lab
-
-Use this after:
+## Use This After
 
 - [LAB-02: Real CI Workflow](../labs/LAB-02-real-ci-workflow.md)
 
-Do not start with this exercise.
+## Goal
 
-Finish `LAB-02` first, then use this challenge to extend the same CI idea across more than one Python version.
+Run the same CI job on Python `3.11` and `3.12` without copying the whole job twice.
 
-## Concepts It Reinforces
-
-- matrix strategy
-- repeated jobs
-- keeping one workflow shape while changing one value
-
-## Challenge Workflow
+## Build
 
 Create this workflow file yourself:
 
 `.github/workflows/02-ci-matrix-exercise.yml`
 
-For this exercise, the prepared solution workflow exists only in the instructor repository.
+Reference solution: instructor repo only.
 
-## Success Check
+## Requirements
 
-You are done when you can explain:
+- Create a CI workflow in `.github/workflows/02-ci-matrix-exercise.yml`.
+- Keep the same CI story from Lab 02.
+- Use a matrix so the job runs for Python `3.11` and `3.12`.
+- Do not copy the whole job twice.
 
-- what repeated and what stayed the same
-- why a matrix is cleaner than copying the whole job twice
-- why this is still the same CI story, not a different story
+## Acceptance Criteria
+
+- The Actions view shows one CI run for Python `3.11`.
+- The Actions view shows one CI run for Python `3.12`.
+- The workflow keeps the same job shape instead of duplicating the whole job.
+- You can explain what repeated and what stayed the same.

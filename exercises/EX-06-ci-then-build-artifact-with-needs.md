@@ -1,73 +1,49 @@
 # EX-06: CI Then Build Artifact With `needs`
 
-## Problem Statement
-
-This is a Day 2 bridge challenge based mainly on `LAB-02`.
-
-The team now wants one manual workflow that combines:
-
-- the CI verification idea from `LAB-02`
-- the packaging idea that Day 2 will explore in more detail
-
-The rule is simple:
-
-the packaging job must wait until the CI job succeeds.
-
-## How to Use This Challenge
-
-This is a guided Day 2 bridge challenge.
-
-Use it with your instructor right after the opening bridge.
-
-The goal is to connect Day 1 CI ideas to Day 2 packaging ideas.
-
-It is not meant to replace `LAB-03`.
-
-## Related Core Lab
-
-Use this after:
+## Use This After
 
 - [LAB-02: Real CI Workflow](../labs/LAB-02-real-ci-workflow.md)
+- the Day 2 opening bridge
 
-Do not start with this exercise.
+Then continue to [LAB-03: Build Artifact Workflow](../labs/LAB-03-build-artifact-workflow.md).
 
-Finish `LAB-02` first, then use this challenge at the beginning of Day 2 as a bridge into packaging.
+## Goal
 
-After that, continue to:
+Build one manual workflow with two jobs:
 
-- [LAB-03: Build Artifact Workflow](../labs/LAB-03-build-artifact-workflow.md)
+1. CI runs first
+2. packaging runs second
 
-## Concepts It Reinforces
+The build job must wait for CI by using `needs`.
 
-- `needs`
-- multi-job workflow structure
-- fixed matrix
-- reusing the CI story before packaging
-- unique artifact naming per matrix run
+## Guided Note
 
-## Challenge Workflow
+This is the guided Day 2 bridge exercise.
+
+Use it with your instructor.
+
+## Build
 
 Create this workflow file yourself:
 
 `.github/workflows/04-ci-then-build-artifact-exercise.yml`
 
-For this exercise, the prepared solution workflow exists only in the instructor repository.
+Reference solution: instructor repo only.
 
-## What to Notice
+## Requirements
 
-Look for:
+- Create a manual workflow in `.github/workflows/04-ci-then-build-artifact-exercise.yml`.
+- The workflow should have one CI job and one packaging job.
+- The CI job should reuse the same verification idea from Lab 02.
+- The packaging job should wait for CI by using `needs`.
+- The packaging job should use a fixed matrix for Python `3.11` and `3.12`.
+- Each package should use the matching Python base image.
+- Each artifact name should stay unique.
 
-- a first job that runs the same CI idea as `LAB-02`
-- a second job that previews the Day 2 packaging story and waits by using `needs`
-- a fixed matrix with Python `3.11` and `3.12`
-- a Docker build that uses the matrix value to choose the Python base image
-- one uploaded artifact per Python version
+## Acceptance Criteria
 
-## Success Check
-
-You are done when you can explain:
-
-- why the build job should not start before CI passes
-- what `needs` changed in the workflow behavior
-- what the matrix repeated and what changed in each package
-- why each artifact name should stay unique per Python version
+- The Actions view shows CI first and packaging second.
+- Packaging does not start before CI succeeds.
+- After CI passes, packaging fans out into one run per Python version.
+- The artifact names are unique.
+- You can explain what `needs` changed in the workflow behavior.

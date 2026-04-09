@@ -1,50 +1,36 @@
 # EX-05: Build Artifact with Buildx
 
-## Problem Statement
-
-This is a challenge based on `LAB-03`.
-
-The core build artifact workflow uses raw Docker commands because they are easier to teach first.
-
-Now imagine the team says:
-
-"Can we keep the same packaging story, but use reusable Docker actions instead of raw Docker commands where possible?"
-
-That is the Buildx challenge.
-
-## Related Core Lab
-
-Use this after:
+## Use This After
 
 - [LAB-03: Build Artifact Workflow](../labs/LAB-03-build-artifact-workflow.md)
 
-Do not start with this exercise.
+## Goal
 
-Finish `LAB-03` first, then use this challenge to compare the same packaging story with a reusable-action implementation.
+Keep the same packaging story from Lab 03, but use reusable Docker actions instead of raw Docker commands where possible.
 
-## Concepts It Reinforces
-
-- reusable actions
-- Docker Buildx
-- action-based image build flow
-- exporting a Docker image tar file
-
-## Challenge Workflow
+## Build
 
 Create this workflow file yourself:
 
 `.github/workflows/03-build-artifact-exercise.yml`
 
-For this exercise, the prepared solution workflow exists only in the instructor repository.
+Reference solution: instructor repo only.
 
-If you need syntax help while building it, use:
+If you need syntax help, use [Finding and Reusing GitHub Actions](../docs/help/07-finding-and-reusing-actions.md).
 
-- [Finding and Reusing GitHub Actions](../docs/help/07-finding-and-reusing-actions.md)
+## Requirements
 
-## Success Check
+- Create a packaging workflow in `.github/workflows/03-build-artifact-exercise.yml`.
+- Keep the same overall story from Lab 03.
+- Run the tests before packaging.
+- Use Buildx-based reusable actions instead of the raw Docker command path.
+- Export the image as a tar file.
+- Upload that tar file as the artifact.
 
-You are done when you can explain:
+## Acceptance Criteria
 
-- what stayed the same compared with the core build workflow
-- what reusable actions replaced
-- why the tar file is still the important output
+- The workflow still shows tests first, then packaging.
+- The workflow produces a tar file as the packaged output.
+- The tar file is uploaded as the artifact.
+- You can explain what stayed the same from Lab 03.
+- You can explain what reusable actions replaced.

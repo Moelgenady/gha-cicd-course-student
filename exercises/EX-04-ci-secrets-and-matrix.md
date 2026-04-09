@@ -1,72 +1,54 @@
 # EX-04: CI Secrets and Matrix Patterns
 
-## Problem Statement
-
-This is a challenge based on `LAB-02`.
-
-## Important Note
-
-This exercise shows advanced GitHub Actions patterns.
-
-It is useful for learning how expressions, matrix values, and secrets can interact.
-
-It is not the default way to handle normal configuration values like version numbers or ports.
-
-The matrix exercise showed how one job can repeat across multiple values.
-
-Now imagine the team says one of these:
-
-- "Our matrix list comes from one stored value."
-- "We already know the matrix entries, but each one should read a different secret."
-
-These are two related but different GitHub Actions problems.
-
-## Related Core Lab
-
-Use this after:
+## Use This After
 
 - [LAB-02: Real CI Workflow](../labs/LAB-02-real-ci-workflow.md)
 
-Do not start with this exercise.
+## Goal
 
-Finish `LAB-02` first, then use this challenge only if the class is ready for a more advanced GitHub Actions pattern.
+Practice two advanced GitHub Actions patterns:
 
-## Pattern A: Build the Matrix From One Secret
+1. build a matrix from one stored secret
+2. keep a fixed matrix and look up a different secret in each run
 
-Create this workflow file yourself:
+## Important Note
 
-`.github/workflows/02-ci-matrix-from-secret-exercise.yml`
+This exercise is for learning GitHub Actions behavior.
 
-Use this when the whole matrix list must come from one changing stored value.
+It is not the normal way to store simple values like Python versions.
 
-## Pattern B: Fixed Matrix with Secret Lookup
+## Build
 
-Create this workflow file yourself:
+Create these workflow files yourself:
 
-`.github/workflows/02-ci-matrix-secret-lookup-exercise.yml`
+- `.github/workflows/02-ci-matrix-from-secret-exercise.yml`
+- `.github/workflows/02-ci-matrix-secret-lookup-exercise.yml`
 
-Use this when the matrix entries are already known and each job only needs to read a different secret.
+Reference solutions: instructor repo only.
 
-For this exercise, the prepared solution workflows exist only in the instructor repository.
+## Requirements
 
-## Concepts It Reinforces
+### Pattern A: Matrix From One Secret
 
-- secrets
-- matrix
-- job outputs
-- dynamic secret lookup
-- choosing the simplest pattern for the real need
+- Create `.github/workflows/02-ci-matrix-from-secret-exercise.yml`.
+- Store the whole version list in one secret.
+- Use one job to read that secret and publish a normal output.
+- Use a second job that turns that output into a matrix with `fromJSON(...)`.
+- Complete this pattern first.
+- Ask your instructor to review it before you move on to Pattern B.
 
-## Beginner Reality Check
+### Pattern B: Fixed Matrix with Secret Lookup
 
-Python versions are usually not secret in real life.
+- Create `.github/workflows/02-ci-matrix-secret-lookup-exercise.yml`.
+- Keep the matrix fixed in the YAML.
+- Put a secret name in each matrix item.
+- Read the real value with `secrets[matrix.version_secret]`.
+- Complete this pattern after Pattern A is working.
 
-This challenge is mainly useful for understanding GitHub Actions behavior, not for recommending secrets as the normal way to store version numbers.
+## Acceptance Criteria
 
-## Success Check
-
-You are done when you can explain:
-
-- why Pattern A needs two jobs
-- why Pattern B can stay in one job
-- which pattern is simpler when the matrix list is already known
+- Pattern A clearly shows one job preparing the matrix values and another job fanning out into multiple CI runs.
+- Pattern B clearly shows that the matrix is already known in the YAML and each run resolves a different secret during the job.
+- You can explain why Pattern A needs two jobs.
+- You can explain why Pattern B can stay in one job.
+- You can explain which pattern is simpler when the matrix is already known.
