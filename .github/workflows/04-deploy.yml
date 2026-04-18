@@ -34,7 +34,6 @@ jobs:
         id: login-ecr
         uses: aws-actions/amazon-ecr-login@v2
 
-      # 3. Set the specific image tag (from your build)
       - name: Set image tag
         id: image-tag
         run: |
