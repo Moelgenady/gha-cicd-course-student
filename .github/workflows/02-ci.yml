@@ -3,7 +3,11 @@
 name: 02 CI Workflow
 
 on:
-  # Run automatically when app code, tests, or this workflow file changes.
+  pull_request:
+    branches: [main]
+    types: [opened, synchronize, reopened]
+  
+    # Run automatically when app code, tests, or this workflow file changes.
   push:
     paths:
       - "app/**"
@@ -13,7 +17,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  run-tests:
+  verify:
     # The runner is the temporary machine that executes the steps below.
     runs-on: ubuntu-latest
 
